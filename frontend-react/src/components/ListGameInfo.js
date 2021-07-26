@@ -11,10 +11,22 @@ export default class ListGameInfo extends Component {
 
         this.addGameInfo = this.addGameInfo.bind(this);
         this.editGameInfo = this.editGameInfo.bind(this);
+        this.deleteGameInfo = this.deleteGameInfo.bind(this);
+        this.readGameInfo = this.readGameInfo.bind(this);
     }
     
     editGameInfo(id) {
         this.props.history.push(`/edit-gameInfo/${id}`);
+    }
+
+    deleteGameInfo(id) {
+        GameInfoService.deleteGameInfo(id).then( res => {
+            this.setState({gameInfo: this.state.gameInfo.filter(gameInfo => gameInfo.id !== id)});
+        });
+    }
+
+    readGameInfo(id) {
+        this.props.history.push(`/read-gameInfo/${id}`);
     }
 
     componentDidMount() {
@@ -59,7 +71,9 @@ export default class ListGameInfo extends Component {
                                         <td> <iframe allow = "fullscreen" width="300px" height="200px" src = {gameInfo.youtubeLink}></iframe></td>
                                         <td> {gameInfo.description} </td>
                                         <td>
-                                            <button onClick = { () => this.editGameInfo(gameInfo.id)} className = "btn btn-light">Edit</button>
+                                            <button onClick = { () => this.readGameInfo(gameInfo.id)} className = "btn btn-info">Read</button>
+                                            <button style = {{marginLeft: "20px"}} onClick = { () => this.editGameInfo(gameInfo.id)} className = "btn btn-light">Edit</button>
+                                            <button style = {{marginLeft: "20px"}} onClick = { () => this.deleteGameInfo(gameInfo.id)} className = "btn btn-danger">Delete</button>
                                         </td>
                                     </tr>
                                 )

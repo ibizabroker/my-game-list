@@ -8,6 +8,7 @@ import NavBar from './components/NavBar';
 import CreateGameInfo from './components/CreateGameInfo';
 // import { Navbar, NavDropdown, Nav, Container } from 'react-bootstrap';
 import EditGameInfo from './components/EditGameInfo';
+import ReadGameInfo from './components/ReadGameInfo';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
               <Route path = "/gameInfo" component = {ListGameInfo}></Route> {/*http://localhost:3000/gameInfo */}
               <Route path = "/add-gameInfo" component = {CreateGameInfo}></Route>
               <Route path = "/edit-gameInfo/:id" component = {EditGameInfo}></Route>
+              <Route path = "/read-gameInfo/:id" component = {ReadGameInfo}></Route>
             </Switch>
           </div>
         <Footer />

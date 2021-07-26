@@ -18,6 +18,10 @@ class GameInfoService {
     updateGameInfo(gameInfo, gameInfoId) {
         return axios.put(GAMEINFO_API_BASE_URL + '/' + gameInfoId, gameInfo);
     }
+
+    deleteGameInfo(gameInfoId) {
+        return axios.delete(GAMEINFO_API_BASE_URL + '/' + gameInfoId)
+    }
 }
 
 export default new GameInfoService()

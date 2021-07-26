@@ -3,12 +3,12 @@ import Select from 'react-select';
 import GameInfoService from '../services/GameInfoService';
 
 const options = [
-    { value: "React", label: "React" },
-    { value: "React Native", label: "React Native" },
-    { value: "Vue", label: "Vue" },
-    { value: "Angular", label: "Angular" },
-    { value: "RxJS", label: "RxJS" },
-    { value: "jQuery", label: "jQuery" }
+    { value: "Action", label: "Action" },
+    { value: "Adventure", label: "Adventure" },
+    { value: "FPS", label: "FPS" },
+    { value: "Open-World", label: "Open-World" },
+    { value: "Role Playing", label: "Role Playing" },
+    { value: "Simulation", label: "Simulation" }
 ];
 
 export default class CreateGameInfo extends Component {
@@ -34,7 +34,12 @@ export default class CreateGameInfo extends Component {
 
     saveGameInfo = (event) => {
         event.preventDefault();
-        let gameInfo = {name: this.state.name, genre: this.state.genre, rating: this.state.rating, imageUrl: this.state.imageUrl, description: this.state.description, youtubeLink: this.state.youtubeLink};
+        let gameInfo = {name: this.state.name, 
+            genre: this.state.genre, 
+            rating: this.state.rating, 
+            imageUrl: this.state.imageUrl, 
+            description: this.state.description, 
+            youtubeLink: this.state.youtubeLink};
         // console.log('gameInfo => ' + JSON.stringify(gameInfo));
         GameInfoService.createGameInfo(gameInfo).then(res => {
             this.props.history.push('/gameInfo');
