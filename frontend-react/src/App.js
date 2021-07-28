@@ -1,6 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Home from './components/Home'
+import About from './components/About'
+import Community from './components/Community'
+import Contact from './components/Contact'
+import Login from './components/Login'
+import Signup from './components/Signup'
 import ListGameInfo from './components/ListGameInfo';
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -13,22 +19,35 @@ import ReadGameInfo from './components/ReadGameInfo';
 function App() {
   return (
     <div>
+      {/* <Header /> */}
+      {/* <NavBar /> */}
       <Router>
-        <Header />
-        <NavBar />
+          <Header/>
           <div className = "container">
             <Switch> 
-              <Route path = "/" exact component = {ListGameInfo}></Route> {/*http://localhost:3000/ */}
-              <Route path = "/gameInfo" component = {ListGameInfo}></Route> {/*http://localhost:3000/gameInfo */}
+              <Route path = "/" exact component = {Home}></Route> 
+              <Route path = "/about" exact component = {About}></Route> 
+              <Route path = "/community" exact component = {Community}></Route> 
+              <Route path = "/contact" exact component = {Contact}></Route> 
+              <Route path = "/login" exact component = {Login}></Route> 
+              <Route path = "/signup" exact component = {Signup}></Route> 
+              <Route path = "/gameInfo" component = {ListGameInfo}></Route> 
               <Route path = "/add-gameInfo" component = {CreateGameInfo}></Route>
               <Route path = "/edit-gameInfo/:id" component = {EditGameInfo}></Route>
               <Route path = "/read-gameInfo/:id" component = {ReadGameInfo}></Route>
             </Switch>
           </div>
-        <Footer />
+        
       </Router>
+      {/* <Footer /> */}
     </div>
   );
 }
 
+
+
+
+
 export default App;
+
+

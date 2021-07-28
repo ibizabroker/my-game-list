@@ -42,6 +42,8 @@ export default class ListGameInfo extends Component {
     render() {
         return (
             <div>
+               
+                      
                 <h2 className = "text-center">Game Information List</h2>
                 <div className = "">
                     <button className = "btn btn-primary" style = {{marginBottom: "20px"}} onClick = {this.addGameInfo}>Add</button>
@@ -54,7 +56,7 @@ export default class ListGameInfo extends Component {
                                 <th>Genre</th>
                                 <th>Rating</th>
                                 <th>Trailer</th>
-                                <th>Description</th>
+                                {/* <th>Description</th> */}
                                 <th>Action Buttons</th>
                             </tr>
                         </thead>
@@ -69,7 +71,7 @@ export default class ListGameInfo extends Component {
                                         <td> {gameInfo.genre} </td>
                                         <td> {gameInfo.rating} </td>
                                         <td> <iframe allow = "fullscreen" width="300px" height="200px" src = {gameInfo.youtubeLink}></iframe></td>
-                                        <td> {gameInfo.description} </td>
+                                        {/* <td> {gameInfo.description} </td> */}
                                         <td>
                                             <button onClick = { () => this.readGameInfo(gameInfo.id)} className = "btn btn-info">Read</button>
                                             <button style = {{marginLeft: "20px"}} onClick = { () => this.editGameInfo(gameInfo.id)} className = "btn btn-light">Edit</button>
