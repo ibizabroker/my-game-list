@@ -19,11 +19,10 @@ import ReadGameInfo from './components/ReadGameInfo';
 function App() {
   return (
     <div>
-      {/* <Header /> */}
-      {/* <NavBar /> */}
+     
       <Router>
-          <Header/>
-          <div className = "container">
+       
+          <div>
             <Switch> 
               <Route path = "/" exact component = {Home}></Route> 
               <Route path = "/about" exact component = {About}></Route> 
@@ -39,14 +38,10 @@ function App() {
           </div>
         
       </Router>
-      {/* <Footer /> */}
+     
     </div>
   );
 }
-
-
-
-
 
 export default App;
 
