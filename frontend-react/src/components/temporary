@@ -1,0 +1,40 @@
+<header>  
+                <h2 className = "container-1">Game Information List</h2>
+                <div className = "">
+                    <button className = "button" style = {{marginBottom: "20px"}} onClick = {this.addGameInfo}>Add</button>
+                </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Poster</th>
+                                <th>Name</th>
+                                <th>Genre</th>
+                                <th>Rating</th>
+                                <th>Trailer</th>
+                                {/* <th>Description</th> */}
+                                <th>Action Buttons</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {
+                                this.state.gameInfo.map(
+                                    gameInfo => 
+                                    <tr key = {gameInfo.id}>
+                                        <td> <img src = {gameInfo.imageUrl} width = "150px" height = "200px" /></td>
+                                        <td> {gameInfo.name} </td>
+                                        <td> {gameInfo.genre} </td>
+                                        <td> {gameInfo.rating} </td>
+                                        <td> <iframe allow = "fullscreen" width="300px" height="200px" src = {gameInfo.youtubeLink}></iframe></td>
+                                        <td>
+                                            <button onClick = { () => this.readGameInfo(gameInfo.id)} className = "btn btn-info">Read</button>
+                                            <button style = {{marginLeft: "20px"}} onClick = { () => this.editGameInfo(gameInfo.id)} className = "btn btn-light">Edit</button>
+                                            <button style = {{marginLeft: "20px"}} onClick = { () => this.deleteGameInfo(gameInfo.id)} className = "btn btn-danger">Delete</button>
+                                        </td>
+                                    </tr>
+                                )
+                            }
+                        </tbody>
+                    </table>
+                    </header>                 
+                    </div>

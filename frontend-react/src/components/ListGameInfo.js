@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import GameInfoService from '../services/GameInfoService'
-
+import {Link} from 'react-router-dom';
 export default class ListGameInfo extends Component {
     constructor(props) {
         super(props)
@@ -41,23 +41,32 @@ export default class ListGameInfo extends Component {
 
     render() {
         return (
-            <div>
+            <body>
+                
+                <header>
+                    <nav>
+                        <ul>
+                        
+                            <li><Link to = {"/"}><i class = "fas fa-user-shield fa-2x" /></Link></li>
+                            <li id = "home"><Link to = {"/"}>ADMIN</Link></li>
+                            <li id = "login"><Link to = {"/"}>Logout <i class = "fas fa-sign-in-alt fa-lg"></i></Link></li>
+                            
+
+                        </ul>   
+                    </nav>
+                </header> 
                
-                      
-                <h2 className = "text-center">Game Information List</h2>
-                <div className = "">
-                    <button className = "btn btn-primary" style = {{marginBottom: "20px"}} onClick = {this.addGameInfo}>Add</button>
-                </div>
-                    <table className = "table table-striped table-dark table-bordered">
+                <header class = "containerAdmin">
+                <table class = "content-table">
                         <thead>
                             <tr>
+                                
                                 <th>Poster</th>
                                 <th>Name</th>
-                                <th>Genre</th>
                                 <th>Rating</th>
                                 <th>Trailer</th>
-                                {/* <th>Description</th> */}
-                                <th>Action Buttons</th>
+                                <th>Actions</th>
+                                <button class = "buttonAddAdmin" onClick = {this.addGameInfo}><i class = "fas fa-plus-circle fa-2x"></i></button>
                             </tr>
                         </thead>
 
@@ -66,24 +75,33 @@ export default class ListGameInfo extends Component {
                                 this.state.gameInfo.map(
                                     gameInfo => 
                                     <tr key = {gameInfo.id}>
-                                        <td> <img src = {gameInfo.imageUrl} width = "150px" height = "200px" /></td>
+                                        <td> <img src = {gameInfo.imageUrl} width = "160px" height = "90px" /></td>
                                         <td> {gameInfo.name} </td>
-                                        <td> {gameInfo.genre} </td>
+                                        {/* <td> {gameInfo.genre} </td> */}
                                         <td> {gameInfo.rating} </td>
-                                        <td> <iframe allow = "fullscreen" width="300px" height="200px" src = {gameInfo.youtubeLink}></iframe></td>
-                                        {/* <td> {gameInfo.description} </td> */}
+                                        <td> <iframe allow = "fullscreen" width="160px" height="90px" src = {gameInfo.youtubeLink}></iframe></td> 
+
                                         <td>
-                                            <button onClick = { () => this.readGameInfo(gameInfo.id)} className = "btn btn-info">Read</button>
-                                            <button style = {{marginLeft: "20px"}} onClick = { () => this.editGameInfo(gameInfo.id)} className = "btn btn-light">Edit</button>
-                                            <button style = {{marginLeft: "20px"}} onClick = { () => this.deleteGameInfo(gameInfo.id)} className = "btn btn-danger">Delete</button>
+                                        <button class = "actionIcons" onClick = {this.readGameInfo}><i class = "fas fa-glasses fa-2x"></i></button>
+                                        <button class = "actionIcons" onClick = { () => this.editGameInfo(gameInfo.id)}><i class = "fas fa-edit fa-2x"></i></button>
+                                        <button class = "actionIcons" onClick = { () => this.deleteGameInfo(gameInfo.id)}><i class = "fas fa-trash fa-2x"></i></button>
+
+
+
+                                            {/* <button class = "actionIcons" onClick  = {this.addGameInfo}><i class = "fas fa-book-open fa-2x"></i></button>
+                                            <button class = "actionIcons" onClick = { () => this.editGameInfo(gameInfo.id)}><i class = "fas fa-edit fa-2x"></i></button>
+                                            <button class = "actionIcons" onClick = { () => this.deleteGameInfo(gameInfo.id)} ><i class = "fas fa-trash fa-2x"></i></button>  */}
                                         </td>
                                     </tr>
                                 )
                             }
-                        </tbody>
-                    </table>
                 
-            </div>
+                        </tbody>
+                </table> 
+                </header>
+            </body>
+            
+            
         )
     }
 }
