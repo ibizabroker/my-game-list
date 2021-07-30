@@ -80,6 +80,7 @@ export default class ListGameInfo extends Component {
                                         {/* <td> {gameInfo.genre} </td> */}
                                         <td> {gameInfo.rating} </td>
                                         <td> <iframe allow = "fullscreen" width="160px" height="90px" src = {gameInfo.youtubeLink}></iframe></td> 
+
                                         <td>
                                         <button class = "actionIcons" onClick = {this.readGameInfo}><i class = "fas fa-glasses fa-2x"></i></button>
                                         <button class = "actionIcons" onClick = { () => this.editGameInfo(gameInfo.id)}><i class = "fas fa-edit fa-2x"></i></button>

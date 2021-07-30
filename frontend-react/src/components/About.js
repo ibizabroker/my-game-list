@@ -3,6 +3,7 @@ import { render } from "@testing-library/react";
 import { Container } from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 
+
 export default class About extends Component {
     render() {
         return (
@@ -28,11 +29,7 @@ export default class About extends Component {
             </header> 
         <header class = "container-1">
             <h1>Welcome to About Page.</h1>
-            <h5>We don't have anything yet here! Sorry :(</h5>
-
-                     
-        
-            
+            <h5>We don't have anything yet here! Sorry :(</h5>   
         </header>   
            
         </body>

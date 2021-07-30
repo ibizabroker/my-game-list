@@ -6,7 +6,6 @@
   padding: 0;
   background: #1a1a1b;  
   border-radius: 5px;
-  
 }
 
 
@@ -111,8 +110,6 @@ header {
   width: 100%; 
   height: 60px;
   border-radius: 5px;
-  
- 
 }
 
 nav ul{
@@ -173,7 +170,6 @@ nav a:hover{
 }
 
 #login {
-  
   margin-right: 270px;
   position:absolute;
   right: 0;
@@ -186,6 +182,7 @@ nav a:hover{
   position:absolute;
   right: 0;
 }
+
 
 #logoGamepad{
   color: green;
@@ -207,8 +204,7 @@ nav a:hover{
   background-color: rgba(0,0,0,0);
   font-family: Montserrat, sans-serif;
   color: rgb(255, 255, 255);
-  margin-top: 250px;
-   
+  margin-top: 250px;   
 }
 
 .container-1 h5{
@@ -278,6 +274,7 @@ nav a:hover{
   background-color: #43a770; 
 }
 
+
 .form-wrap{ width: 320px; height: 450px; padding: 10px; box-sizing: border-box; position: fixed; background-color:#393a3b;
   left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 10px; border: 2px solid rgb(34, 34, 34);}
 
@@ -292,10 +289,10 @@ nav a:hover{
 .form-wrap input:focus,
 select:focus,
 textarea:focus,
+
 button:focus {
     outline: none;
 }  
-
 
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -306,6 +303,7 @@ button:focus {
 input[type=date]:invalid::-webkit-datetime-edit {
   color:rgb(190, 189, 189);
 }
+
 .loginButton {
   background-color: #406953;
   border: none;
@@ -328,8 +326,7 @@ input[type=date]:invalid::-webkit-datetime-edit {
 }
 
 .loginLogo{
-  width: 100px; height: 100px;
-  
+  width: 100px; height: 100px;  
   position: absolute;
   margin-top: -160px;
   margin-left: 100px;
@@ -339,11 +336,11 @@ input[type=date]:invalid::-webkit-datetime-edit {
 }
 
 
+
 .form-wrap-signup{ width: 400px; height: 500px; padding: 10px; box-sizing: border-box; position: fixed; background-color:#393a3b;
   left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 10px;}
 
 .form-wrap-signup h1{text-align: center; color: rgb(247, 223, 223); font-size: 30px; margin-top: 20px; margin-bottom: 30px; font-family: 'Montserrat'; background-color: #393a3b}
-
 
 .form-wrap-signup input{width: 80%; margin-left: 50px; margin-right: auto; background: none; border: none; padding: 6px 20px; border-bottom: 1px solid #a1a3a5;
   box-sizing: border-box; margin-bottom: 15px; font-size: 16px; color: rgb(238, 228, 2228);font-family: 'Montserrat'; margin-top: 10px;}
@@ -359,8 +356,7 @@ button:focus {
     opacity: 1; 
   }
 
-
-  .signupButton {
+ .signupButton {
     background-color: #406953;
     border: none;
     color: white;
@@ -376,9 +372,8 @@ button:focus {
     text-decoration: none;
     display: inline-block;
     font-size: 15x;
-
-
-  }
+}
+  
   .signupButton:hover{
     background-color: #43a770; 
   }
@@ -591,5 +586,4 @@ font-size: 15x;
   .actionIcons{
     background-color: rgba(0,0,0,0);
     border: none;
-    
   }
