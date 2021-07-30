@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { render } from "@testing-library/react";
-import { Container } from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 
 export default class Home extends Component {
@@ -32,11 +30,9 @@ export default class Home extends Component {
             <h1 class = "fade-in-text">Welcome to the Repository of Games.</h1>
             <h5 class = "fade-in-text">The simplest way to keep track of all the games you wish to play!</h5>
 
-            <button class = "button">Getting Started!</button>
-                  
-                   
+            <Link to = {"/signup"}><button class = "button button-center">Getting Started!</button></Link>
+                             
         </header>   
-           
         </body>
         )
     }

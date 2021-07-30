@@ -49,6 +49,7 @@
   color: #f4f4f4;
   background-color: #000;
 }
+
 .logo{
   float:left;
   width: 45px;
@@ -190,11 +191,11 @@ nav a:hover{
 
 .container-1{
   width: 70%;
-  height: 650px;
+  height: 85%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 50px;
-  margin-top: 73px;
+  position: fixed;
+  top: 10%;
   border-radius: 5px;
   right: 0;
   opacity: 0.8;
@@ -268,6 +269,15 @@ nav a:hover{
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   font-size: 15x;
+}
+
+.button-center {
+  margin: 0;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .button:hover{
