@@ -193,11 +193,11 @@ nav a:hover{
 
 .container-1{
   width: 70%;
-  height: 650px;
+  height: 85%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 50px;
-  margin-top: 73px;
+  position: fixed;
+  top: 10%;
   border-radius: 5px;
   right: 0;
   opacity: 0.8;
@@ -297,7 +297,6 @@ button:focus {
 }  
 
 
-
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color:rgb(190, 189, 189);
   opacity: 1; /* Firefox */
@@ -329,7 +328,6 @@ input[type=date]:invalid::-webkit-datetime-edit {
 
 .loginLogo{
   width: 100px; height: 100px;
-  
   position: absolute;
   margin-top: -160px;
   margin-left: 100px;
@@ -344,7 +342,6 @@ input[type=date]:invalid::-webkit-datetime-edit {
 
 .form-wrap-signup h1{text-align: center; color: rgb(247, 223, 223); font-size: 30px; margin-top: 20px; margin-bottom: 30px; font-family: 'Montserrat'; background-color: #393a3b}
 
-
 .form-wrap-signup input{width: 80%; margin-left: 50px; margin-right: auto; background: none; border: none; padding: 6px 20px; border-bottom: 1px solid #a1a3a5;
   box-sizing: border-box; margin-bottom: 15px; font-size: 16px; color: rgb(238, 228, 2228);font-family: 'Montserrat'; margin-top: 10px;}
 
@@ -354,28 +351,27 @@ textarea:focus,
 button:focus {
     outline: none;
 }  
- ::placeholder{
-    color:rgb(190, 189, 189);
-    opacity: 1; 
-  }
+::placeholder{
+  color:rgb(190, 189, 189);
+  opacity: 1; 
+}
 
-
-  .signupButton {
-    background-color: #406953;
-    border: none;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 30px;
-    margin-top: 20px;
-    position: absolute; 
-    left: 50%;
-    top: 75%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 15x;
+.signupButton {
+  background-color: #406953;
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 30px;
+  margin-top: 20px;
+  position: absolute; 
+  left: 50%;
+  top: 75%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15x;
 
 
   }
@@ -387,13 +383,13 @@ button:focus {
     color: #55c487;
     background-color: rgba(0,0,0,0);
     margin-left: 70px;
+    /* margin-left: 86px; */
     
   }
 
   .fa-home:hover{
     color: #618a60;
     background-color: rgba(0,0,0,0);
-    
     animation: spin-animation 0.7s infinite;
     animation-timing-function: linear;
     display: inline-block;
@@ -481,7 +477,6 @@ button:focus {
 
 .content-table{
 
-  
   border-radius: 10px;
   border-collapse: collapse;
   font-size: 0.9em; 
@@ -489,8 +484,7 @@ button:focus {
   padding: 15px;
   font-family: 'Montserrat';
   text-transform: uppercase;
-   
-  
+ 
 }
 
 .content-table thead tr{

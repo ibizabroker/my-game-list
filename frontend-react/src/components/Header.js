@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom';
 import FontAwesomeIcon from "@fortawesome/react-fontawesome"
 
 
-
 export default class Header extends Component {
     constructor(props) {
         super(props)

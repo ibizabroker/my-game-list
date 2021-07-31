@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import GameInfoService from '../services/GameInfoService'
 import {Link} from 'react-router-dom';
-
 export default class ListGameInfo extends Component {
     constructor(props) {
         super(props)
@@ -57,17 +56,13 @@ export default class ListGameInfo extends Component {
                     </nav>
                 </header> 
                
-               
                 <header class = "containerAdmin">
-                
                 <table class = "content-table">
-                        
                         <thead>
                             <tr>
-                                <th>ID</th>
+                                
                                 <th>Poster</th>
                                 <th>Name</th>
-                                <th>Genre</th>
                                 <th>Rating</th>
                                 <th>Description</th>
                                 <th>Trailer</th>
@@ -83,18 +78,22 @@ export default class ListGameInfo extends Component {
                                 this.state.gameInfo.map(
                                     gameInfo => 
                                     <tr key = {gameInfo.id}>
-                                        <td>{gameInfo.id}</td>
-                                        <td> <img src = {gameInfo.imageUrl} width = "160px" height = "90px"/></td>
+                                        <td> <img src = {gameInfo.imageUrl} width = "160px" height = "90px" /></td>
                                         <td> {gameInfo.name} </td>
-                                        <td> {gameInfo.genre} </td>
+                                        {/* <td> {gameInfo.genre} </td> */}
                                         <td> {gameInfo.rating} </td>
-                                        <td> {gameInfo.name} </td> 
-                                        <td> <iframe class = "trailerIcons" allow = "fullscreen" width="160px" height="90px" src = {gameInfo.youtubeLink}></iframe></td>
+                                        <td> <iframe allow = "fullscreen" width="160px" height="90px" src = {gameInfo.youtubeLink}></iframe></td> 
+
                                         <td>
-                                        <button class = "actionIcons" onClick = { () => this.readGameInfo(gameInfo.id)}><i class = "fas fa-glasses fa-lg"></i></button>
-                                        <button class = "actionIcons" onClick = { () => this.editGameInfo(gameInfo.id)}><i class = "fas fa-edit fa-lg"></i></button>
-                                        <button class = "actionIcons" onClick = { () => this.deleteGameInfo(gameInfo.id)}><i class = "fas fa-trash fa-lg"></i></button>
-                                        
+                                        <button class = "actionIcons" onClick = {this.readGameInfo}><i class = "fas fa-glasses fa-2x"></i></button>
+                                        <button class = "actionIcons" onClick = { () => this.editGameInfo(gameInfo.id)}><i class = "fas fa-edit fa-2x"></i></button>
+                                        <button class = "actionIcons" onClick = { () => this.deleteGameInfo(gameInfo.id)}><i class = "fas fa-trash fa-2x"></i></button>
+
+
+
+                                            {/* <button class = "actionIcons" onClick  = {this.addGameInfo}><i class = "fas fa-book-open fa-2x"></i></button>
+                                            <button class = "actionIcons" onClick = { () => this.editGameInfo(gameInfo.id)}><i class = "fas fa-edit fa-2x"></i></button>
+                                            <button class = "actionIcons" onClick = { () => this.deleteGameInfo(gameInfo.id)} ><i class = "fas fa-trash fa-2x"></i></button>  */}
                                         </td>
                                     </tr>
                                 )
@@ -102,9 +101,7 @@ export default class ListGameInfo extends Component {
                 
                         </tbody>
                 </table> 
-                
                 </header>
-                
             </body>
             
             
