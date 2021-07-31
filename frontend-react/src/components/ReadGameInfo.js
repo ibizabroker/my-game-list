@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import GameInfoService from '../services/GameInfoService'
+import {Link} from 'react-router-dom';
 
 export default class ReadGameInfo extends Component {
     constructor(props) {
@@ -26,9 +27,27 @@ export default class ReadGameInfo extends Component {
 
     render() {
         return (
-            <div>
+            
+            
+            <body>
+                
+                <header>
+                    <nav>
+                        <ul>
+                        
+                            <li><Link to = {"/"}><i class = "fas fa-user-shield fa-2x" /></Link></li>
+                            <li id = "home"><Link to = {"/"}>ADMIN</Link></li>
+                            <li id = "login"><Link to = {"/"}>Logout <i class = "fas fa-sign-in-alt fa-lg"></i></Link></li>
+                            
+
+                        </ul>   
+                    </nav>
+                </header> 
+               
+                            
+          
                 <button className = "btn btn-warning" style = {{marginTop: "20px"}} onClick = {this.goBackGameInfo}>Go Back</button>
-                <div className = "container">
+                <div className = "">
                     <br></br>
                     <h2 className = "text-left">{this.state.gameInfo.name}</h2>
                     <br></br>
@@ -42,7 +61,9 @@ export default class ReadGameInfo extends Component {
                     <h4 style = {{paddingTop: "40px", paddingBottom: "10px"}}>Trailer</h4>
                     <iframe src = {this.state.gameInfo.youtubeLink} height = "300px" width = "400px"></iframe>
                 </div>
-            </div>
+           
+
+            </body>
         )
     }
 }

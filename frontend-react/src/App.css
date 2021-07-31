@@ -386,15 +386,15 @@ button:focus {
   .fa-home{
     color: #55c487;
     background-color: rgba(0,0,0,0);
-    margin-left: 86px;
+    margin-left: 70px;
     
   }
 
   .fa-home:hover{
     color: #618a60;
     background-color: rgba(0,0,0,0);
-    margin-left: 86px;
-    animation: spin-animation 0.7s;
+    
+    animation: spin-animation 0.7s infinite;
     animation-timing-function: linear;
     display: inline-block;
   }
@@ -415,17 +415,21 @@ button:focus {
     color: #1f1f1f;
     margin: 0;
     position: absolute;
-    top: 15%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    top: 10%;
+    left: 40%;
+    /* -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
     background-color: rgba(0,0,0,0);
+
   }
     
 
 
   .fa-gamepad:hover{
     color: #6b6b6b;
+    animation: spin-animation 0.8s;
+    animation-timing-function: linear;
+    display: inline-block;
     
   }
 
@@ -456,11 +460,12 @@ button:focus {
   color: #39aa6c;
   background-color: rgba(0,0,0,0);
   margin-left: 65px;
+  
 }
 
 
 .containerAdmin{
-  width: 55%;
+  width: 80%;
   height: 650px;
   margin-left: auto;
   margin-right: auto;
@@ -468,21 +473,24 @@ button:focus {
   margin-top: 73px;
   right: 0;
   opacity: 0.8;
-  
+  overflow-y: auto; 
+  overflow-x: hidden;
 }
 
 
 
 .content-table{
 
-  background: #6fbb91;
+  
   border-radius: 10px;
   border-collapse: collapse;
   font-size: 0.9em; 
   width : 100%;
+  padding: 15px;
   font-family: 'Montserrat';
   text-transform: uppercase;
-  overflow: hidden;
+   
+  
 }
 
 .content-table thead tr{
@@ -491,11 +499,12 @@ button:focus {
   text-align: left;
   font-weight: bold; 
   border: none;
+  
 }
 
 .content-table thead th, td{
-  background: #80cea9;
-  padding: 13px 20px;
+  background-color: #ffffff;
+  padding: 13px 30px;
   border: none;
   border-radius: 0px;
   font-family: 'Montserrat';
@@ -503,21 +512,8 @@ button:focus {
 
 }
 
-
-
-.buttonAddAdmin{
-background-color: rgba(0,0,0,0);
-border: none;
-color: white;
-padding: 10px;
-margin-top: 50px;
-margin: 0;
-position: absolute;
-top: 4%;
-left: 90%;
--ms-transform: translate(-50%, -50%);
-transform: translate(-50%, -50%);
-font-size: 15x;
+.content-table tbody tr:nth-of-type(odd) td{
+  background-color: #f3f3f3;
 }
 
 .buttonAddAdmin:hover{
@@ -525,16 +521,24 @@ font-size: 15x;
 }
 
 
-.fa-plus-circle{
+.fa-plus{
+  margin-left: 900px;
   background-color: rgba(0,0,0,0);
-  height:20px;
-  border-radius:50%;
-  -moz-border-radius:50%;
-  -webkit-border-radius:50%;
-  
-  margin-left: 110px;
+
+}
+.fa-plus:hover{
+ color:rgb(190, 189, 189);
 }
 
+.fa-glasses{
+  
+  background-color: rgba(0,0,0,0);
+
+}
+
+.fa-glasses:hover{
+  color: #bac783;
+}
 
 .actionButtons{
   background-color: rgba(197, 41, 41, 0);
@@ -551,30 +555,20 @@ font-size: 15x;
   font-size: 15x;
   }
 
-  .fa-plus-circle{
+  .fa-plus{
     background-color: rgba(0,0,0,0);
     height:20px;
     border-radius:50%;
     -moz-border-radius:50%;
     -webkit-border-radius:50%;
-    
-    margin-left: 110px;
+     margin-left: 110px;
   }
-  
-  .fa-glasses{
-    
-    color: #f8d409;
-    margin-left: 5px;
-    background: none;
-  }
-
-  .fa-glasses:hover{color: #7a7242;}
-  
+   
   .fa-edit{
 
     color: #4ca05a;
     background-color: rgba(0,0,0,0);
-    margin-left: 15px;
+    margin-left: 12px;
   }
 
   .fa-edit:hover{color: #09f831;}
@@ -583,7 +577,7 @@ font-size: 15x;
 
     color: #b14919;
     background-color: rgba(0,0,0,0);
-    margin-left: 10px;
+    margin-left: 9px;
   }
 
   .fa-trash:hover{color: #ff0000;}
@@ -592,4 +586,14 @@ font-size: 15x;
     background-color: rgba(0,0,0,0);
     border: none;
     
+  }
+
+  .trailerIcons{
+    border: none;
+    width: 160px;
+    height: 90px;
+    margin: 0;
+    padding: 0;
+    
+    display:block;
   }
