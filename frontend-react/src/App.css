@@ -6,6 +6,7 @@
   padding: 0;
   background: #1a1a1b;  
   border-radius: 5px;
+  
 }
 
 
@@ -49,7 +50,6 @@
   color: #f4f4f4;
   background-color: #000;
 }
-
 .logo{
   float:left;
   width: 45px;
@@ -111,6 +111,8 @@ header {
   width: 100%; 
   height: 60px;
   border-radius: 5px;
+  
+ 
 }
 
 nav ul{
@@ -171,6 +173,7 @@ nav a:hover{
 }
 
 #login {
+  
   margin-right: 270px;
   position:absolute;
   right: 0;
@@ -183,7 +186,6 @@ nav a:hover{
   position:absolute;
   right: 0;
 }
-
 
 #logoGamepad{
   color: green;
@@ -205,7 +207,8 @@ nav a:hover{
   background-color: rgba(0,0,0,0);
   font-family: Montserrat, sans-serif;
   color: rgb(255, 255, 255);
-  margin-top: 250px;   
+  margin-top: 250px;
+   
 }
 
 .container-1 h5{
@@ -271,19 +274,9 @@ nav a:hover{
   font-size: 15x;
 }
 
-.button-center {
-  margin: 0;
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
 .button:hover{
   background-color: #43a770; 
 }
-
 
 .form-wrap{ width: 320px; height: 450px; padding: 10px; box-sizing: border-box; position: fixed; background-color:#393a3b;
   left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 10px; border: 2px solid rgb(34, 34, 34);}
@@ -299,7 +292,6 @@ nav a:hover{
 .form-wrap input:focus,
 select:focus,
 textarea:focus,
-
 button:focus {
     outline: none;
 }  
@@ -313,7 +305,6 @@ button:focus {
 input[type=date]:invalid::-webkit-datetime-edit {
   color:rgb(190, 189, 189);
 }
-
 .loginButton {
   background-color: #406953;
   border: none;
@@ -336,7 +327,7 @@ input[type=date]:invalid::-webkit-datetime-edit {
 }
 
 .loginLogo{
-  width: 100px; height: 100px;  
+  width: 100px; height: 100px;
   position: absolute;
   margin-top: -160px;
   margin-left: 100px;
@@ -344,7 +335,6 @@ input[type=date]:invalid::-webkit-datetime-edit {
   opacity: 0.8;
   
 }
-
 
 
 .form-wrap-signup{ width: 400px; height: 500px; padding: 10px; box-sizing: border-box; position: fixed; background-color:#393a3b;
@@ -361,29 +351,30 @@ textarea:focus,
 button:focus {
     outline: none;
 }  
- ::placeholder{
-    color:rgb(190, 189, 189);
-    opacity: 1; 
-  }
-
- .signupButton {
-    background-color: #406953;
-    border: none;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 30px;
-    margin-top: 20px;
-    position: absolute; 
-    left: 50%;
-    top: 75%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 15x;
+::placeholder{
+  color:rgb(190, 189, 189);
+  opacity: 1; 
 }
-  
+
+.signupButton {
+  background-color: #406953;
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 30px;
+  margin-top: 20px;
+  position: absolute; 
+  left: 50%;
+  top: 75%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15x;
+
+
+  }
   .signupButton:hover{
     background-color: #43a770; 
   }
@@ -391,15 +382,15 @@ button:focus {
   .fa-home{
     color: #55c487;
     background-color: rgba(0,0,0,0);
-    margin-left: 86px;
+    margin-left: 70px;
+    /* margin-left: 86px; */
     
   }
 
   .fa-home:hover{
     color: #618a60;
     background-color: rgba(0,0,0,0);
-    margin-left: 86px;
-    animation: spin-animation 0.7s;
+    animation: spin-animation 0.7s infinite;
     animation-timing-function: linear;
     display: inline-block;
   }
@@ -420,17 +411,21 @@ button:focus {
     color: #1f1f1f;
     margin: 0;
     position: absolute;
-    top: 15%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    top: 10%;
+    left: 40%;
+    /* -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
     background-color: rgba(0,0,0,0);
+
   }
     
 
 
   .fa-gamepad:hover{
     color: #6b6b6b;
+    animation: spin-animation 0.8s;
+    animation-timing-function: linear;
+    display: inline-block;
     
   }
 
@@ -461,11 +456,12 @@ button:focus {
   color: #39aa6c;
   background-color: rgba(0,0,0,0);
   margin-left: 65px;
+  
 }
 
 
 .containerAdmin{
-  width: 55%;
+  width: 80%;
   height: 650px;
   margin-left: auto;
   margin-right: auto;
@@ -473,21 +469,22 @@ button:focus {
   margin-top: 73px;
   right: 0;
   opacity: 0.8;
-  
+  overflow-y: auto; 
+  overflow-x: hidden;
 }
 
 
 
 .content-table{
 
-  background: #6fbb91;
   border-radius: 10px;
   border-collapse: collapse;
   font-size: 0.9em; 
   width : 100%;
+  padding: 15px;
   font-family: 'Montserrat';
   text-transform: uppercase;
-  overflow: hidden;
+ 
 }
 
 .content-table thead tr{
@@ -496,11 +493,12 @@ button:focus {
   text-align: left;
   font-weight: bold; 
   border: none;
+  
 }
 
 .content-table thead th, td{
-  background: #80cea9;
-  padding: 13px 20px;
+  background-color: #ffffff;
+  padding: 13px 30px;
   border: none;
   border-radius: 0px;
   font-family: 'Montserrat';
@@ -508,21 +506,8 @@ button:focus {
 
 }
 
-
-
-.buttonAddAdmin{
-background-color: rgba(0,0,0,0);
-border: none;
-color: white;
-padding: 10px;
-margin-top: 50px;
-margin: 0;
-position: absolute;
-top: 4%;
-left: 90%;
--ms-transform: translate(-50%, -50%);
-transform: translate(-50%, -50%);
-font-size: 15x;
+.content-table tbody tr:nth-of-type(odd) td{
+  background-color: #f3f3f3;
 }
 
 .buttonAddAdmin:hover{
@@ -530,16 +515,24 @@ font-size: 15x;
 }
 
 
-.fa-plus-circle{
+.fa-plus{
+  margin-left: 900px;
   background-color: rgba(0,0,0,0);
-  height:20px;
-  border-radius:50%;
-  -moz-border-radius:50%;
-  -webkit-border-radius:50%;
-  
-  margin-left: 110px;
+
+}
+.fa-plus:hover{
+ color:rgb(190, 189, 189);
 }
 
+.fa-glasses{
+  
+  background-color: rgba(0,0,0,0);
+
+}
+
+.fa-glasses:hover{
+  color: #bac783;
+}
 
 .actionButtons{
   background-color: rgba(197, 41, 41, 0);
@@ -556,30 +549,20 @@ font-size: 15x;
   font-size: 15x;
   }
 
-  .fa-plus-circle{
+  .fa-plus{
     background-color: rgba(0,0,0,0);
     height:20px;
     border-radius:50%;
     -moz-border-radius:50%;
     -webkit-border-radius:50%;
-    
-    margin-left: 110px;
+     margin-left: 110px;
   }
-  
-  .fa-glasses{
-    
-    color: #f8d409;
-    margin-left: 5px;
-    background: none;
-  }
-
-  .fa-glasses:hover{color: #7a7242;}
-  
+   
   .fa-edit{
 
     color: #4ca05a;
     background-color: rgba(0,0,0,0);
-    margin-left: 15px;
+    margin-left: 12px;
   }
 
   .fa-edit:hover{color: #09f831;}
@@ -588,7 +571,7 @@ font-size: 15x;
 
     color: #b14919;
     background-color: rgba(0,0,0,0);
-    margin-left: 10px;
+    margin-left: 9px;
   }
 
   .fa-trash:hover{color: #ff0000;}
@@ -596,4 +579,15 @@ font-size: 15x;
   .actionIcons{
     background-color: rgba(0,0,0,0);
     border: none;
+    
+  }
+
+  .trailerIcons{
+    border: none;
+    width: 160px;
+    height: 90px;
+    margin: 0;
+    padding: 0;
+    
+    display:block;
   }

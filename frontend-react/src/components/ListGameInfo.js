@@ -64,12 +64,15 @@ export default class ListGameInfo extends Component {
                                 <th>Poster</th>
                                 <th>Name</th>
                                 <th>Rating</th>
+                                <th>Description</th>
                                 <th>Trailer</th>
-                                <th>Actions</th>
-                                <button class = "buttonAddAdmin" onClick = {this.addGameInfo}><i class = "fas fa-plus-circle fa-2x"></i></button>
+                                <th><i  onClick = {this.addGameInfo} class = "fas fa-plus fa-lg"></i></th>
+                                
+                                
+                                
                             </tr>
                         </thead>
-
+                        
                         <tbody>
                             {
                                 this.state.gameInfo.map(

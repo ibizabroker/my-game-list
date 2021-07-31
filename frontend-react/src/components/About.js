@@ -3,7 +3,6 @@ import { render } from "@testing-library/react";
 import { Container } from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 
-
 export default class About extends Component {
     render() {
         return (
