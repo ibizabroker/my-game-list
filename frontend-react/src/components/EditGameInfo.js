@@ -102,7 +102,7 @@ export default class EditGameInfo extends Component {
                         <div className = "card col-md-6 offset-md-3">
                             <h3 className = "text-center" style = {{marginTop: "10px"}}>Edit Game Information</h3>
                             <div className = "card-body">
-                                <form>
+                                <form autocomplete="off">
 
                                     <div className = "form-group">
                                         <label style = {{marginTop: "20px"}}> Name: </label>
